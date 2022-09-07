@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "armToolchainPath": "C:/gcc-arm/bin/",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "runToEntryPoint": "main",
+            "executable": "./build/source.elf",
+            "name": "Debug Microcontroller",
+            "device": "ATSAMD20E18",
+            "openOCDLaunchCommands": [],
+            "configFiles": [
+                "/interface/stlink.cfg",
+                "target/at91samdXX.cfg"
+            ],
+            "svdFile": "${workspaceRoot}/init/svd/ATSAMD20E18.svd",
+            "swoConfig":{
+                "enabled":true,
+                "source":"probe",
+                "swoFrequency": 200000,
+                "cpuFrequency":16000000,
+                "decoders": [
+                    {
+                        "port": 0,
+                        "type": "console",
+                        "label": "SWO output",
+                        "encoding":"ascii"
+                    }
+                ]
+            },
+        }
+    ]
+}

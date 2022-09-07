@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"samd20g18.h": "c",
+			"samd20e18.h": "c",
+			"system_samd20.h": "c",
+			"sam.h": "c",
+			"*.tcc": "cpp",
+			"random": "cpp",
+			"limits": "cpp"
+		}
+	}
+}
